@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp">
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="64dp"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:paddingTop="64dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_inputbox"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_btn_shape"
+            android:paddingLeft="130dip"
+            android:paddingRight="130dip"
+            android:text="登 录"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/login_btn"
+            android:layout_below="@+id/login_btn"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/login_btn_shape"
+            android:paddingLeft="130dip"
+            android:paddingRight="130dip"
+            android:text="注 册"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/password_inputbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName_layout"
+            android:background="@drawable/login_edittext_style"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="密码"
+            android:maxLength="16"
+            android:password="true"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/userName_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_avatar_img"
+            android:layout_marginTop="30dip"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/username_inputbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/login_edittext_style"
+                android:hint="QQ号/手机号/邮箱"
+                android:maxLength="12"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/showUser_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/down_arrow"
+                android:scaleType="fitXY"
+                android:layout_weight="0.17" />
+        </LinearLayout>
+
+        <com.example.a15656.test5.cjq.interfacelayer.CustomerView.AvatarImageView
+            android:id="@+id/login_avatar_img"
+            android:layout_width="96dip"
+            android:layout_height="96dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:src="@mipmap/login" />
+    </RelativeLayout>
+
+
+    <!-- Login progress -->
+
+</RelativeLayout>
